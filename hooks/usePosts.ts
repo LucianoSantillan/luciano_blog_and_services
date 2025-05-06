@@ -1,13 +1,7 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
+import { Post } from "./usePost";
 
-export interface Post {
-  userId: number;
-  id: number;
-  title: string;
-  body: string;
-}
-
-const fetchPosts = async ({ pageParam = 1 }): Promise<Post[]> => {
+const fetchPostsPage = async ({ pageParam = 1 }): Promise<Post[]> => {
   const res = await fetch(
     `https://jsonplaceholder.typicode.com/posts?_limit=10&_page=${pageParam}`
   );
@@ -18,6 +12,8 @@ const fetchPosts = async ({ pageParam = 1 }): Promise<Post[]> => {
 export const usePosts = () =>
   useInfiniteQuery<Post[], Error>({
     queryKey: ["posts"],
-    queryFn: fetchPosts,
+    queryFn: fetchPostsPage,
     getNextPageParam: (_, pages) => pages.length + 1,
+    staleTime: 60_000,      // 1 minute
+    cacheTime: 5 * 60_000,  // 5 minutes
   });
