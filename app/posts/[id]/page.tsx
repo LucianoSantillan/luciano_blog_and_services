@@ -4,12 +4,15 @@ import { usePost } from "../../../hooks/usePost";
 import { CommentList } from "../../../components/CommentList";
 import { NewCommentForm } from "@/components/NewCommentForm";  // ← NEW
 import Link from "next/link";
+import { Spinner } from "@/components/Spinner";
 
 export default function PostDetailPage({ params }: { params: { id: string } }) {
   const postId = Number(params.id);
   const { data: post, isLoading, error } = usePost(postId);
 
-  if (isLoading) return <p className="text-center mt-10">Loading…</p>;
+  if (isLoading) return <div className="flex justify-center mt-10">
+  <Spinner size={32} />
+</div>;
   if (error)     return <p className="text-center mt-10 text-red-600">Error loading post.</p>;
   if (!post)     return null;
 
