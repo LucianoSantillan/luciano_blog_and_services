@@ -3,6 +3,7 @@
 import { usePosts } from "../hooks/usePosts";
 import { PostCard } from "../components/PostCard";
 import { useRef, useEffect } from "react";
+import { Spinner } from "@/components/Spinner";
 
 export default function Home() {
   const { data, isLoading, fetchNextPage, hasNextPage } = usePosts();
@@ -26,7 +27,9 @@ export default function Home() {
   }, [fetchNextPage, hasNextPage]);
 
   if (isLoading) {
-    return <p className="text-center mt-10">Loading...</p>;
+    return <div className="flex justify-center mt-10">
+    <Spinner size={32} />
+  </div>;
   }
 
   return (
