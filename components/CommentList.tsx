@@ -6,7 +6,7 @@ export function CommentList({ postId }: { postId: number }) {
   const deleteComment = useDeleteComment(postId);
 
   if (isLoading) return <p className="text-sm text-gray-500">Loading comments…</p>;
-  if (error)      return <p className="text-red-500">Error loading comments.</p>;
+  if (error) return <p className="text-red-500">Error loading comments.</p>;
 
   return (
     <ul className="space-y-4 mt-6">
@@ -14,7 +14,7 @@ export function CommentList({ postId }: { postId: number }) {
         <li key={c.id} className="bg-white rounded-xl p-4 shadow relative">
           <button
             aria-label="Delete comment"
-            onClick={() => {console.log("onClick"); deleteComment.mutate(c.id)}}
+            onClick={() => { console.log("onClick"); deleteComment.mutate(c.id) }}
             disabled={deleteComment.isLoading}
             className="absolute top-2 right-2 text-xs text-red-500 hover:underline"
           >

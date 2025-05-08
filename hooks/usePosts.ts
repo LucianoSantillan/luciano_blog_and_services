@@ -14,6 +14,11 @@ export const usePosts = () =>
     queryKey: ["posts"],
     queryFn: fetchPostsPage,
     getNextPageParam: (_, pages) => pages.length + 1,
-    staleTime: 60_000,      // 1 minute
-    cacheTime: 5 * 60_000,  // 5 minutes
+    staleTime: 7000,      // 1 minute
+    cacheTime: 5000,  // 5 minutes
+    // enabled: false,
+    // refetchInterval: 10000,
+    // refetchOnMount: "always",
+    // refetchOnWindowFocus: true,
+    // refetchOnReconnect: true
   });
