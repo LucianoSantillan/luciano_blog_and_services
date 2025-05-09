@@ -24,8 +24,8 @@ export default function PostDetailPage({ params }: { params: { id: string } }) {
       <p className="mb-6">{post.body}</p>
 
       <h2 className="text-xl font-semibold mb-2">Comments</h2>
+      <NewCommentForm postId={postId} />
       <CommentList postId={postId} />
-      <NewCommentForm postId={postId} />   {/* ← NEW */}
     </main>
   );
 }
