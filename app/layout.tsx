@@ -20,7 +20,9 @@ export default function RootLayout({
       <body className={`bg-gray-50 text-gray-900 ${inter.className}`}>
         <ReactQueryClientProvider>
 
-          <ErrorBoundary>{children}</ErrorBoundary>
+          {/* <ErrorBoundary> */}
+            {children}
+            {/* </ErrorBoundary> */}
           </ReactQueryClientProvider>
       </body>
     </html>

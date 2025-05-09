@@ -3,9 +3,11 @@ import { PostCard } from "@/components/PostCard";
 import { Spinner } from "@/components/Spinner";
 import { useInfiniteScroll } from "@/hooks/useInfiniteScroll";
 import { usePosts } from "@/hooks/usePosts";
+import { Post } from "@/hooks/usePost";
 
-export default function HomeContent() {
-  const { data, isLoading, fetchNextPage, hasNextPage } = usePosts();
+export default function HomeContent({posts}: {posts: Post[]}) {
+  console.log("posts", posts);
+  const { data, isLoading, fetchNextPage, hasNextPage } = usePosts({initialData: posts});
   const loaderRef = useInfiniteScroll({ hasNextPage: !!hasNextPage, fetchNextPage });
   console.log("has next page", hasNextPage);
 

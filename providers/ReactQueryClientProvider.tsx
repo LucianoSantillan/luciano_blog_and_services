@@ -26,7 +26,9 @@ export function ReactQueryClientProvider({
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Hydrate state={dehydratedState}>{children}</Hydrate>
+      {/* <Hydrate state={dehydratedState}> */}
+        {children}
+        {/* </Hydrate> */}
       <ReactQueryDevtools initialIsOpen={false} position="bottom-left" />
     </QueryClientProvider>
   );
