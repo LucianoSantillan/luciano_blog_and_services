@@ -1,15 +1,16 @@
 "use client";
+import { useState } from "react";
 import { PostCard } from "@/components/PostCard";
 import { Spinner } from "@/components/Spinner";
-import { useInfiniteScroll } from "@/hooks/useInfiniteScroll";
 import { usePosts } from "@/hooks/usePosts";
 import { Post } from "@/hooks/usePost";
 
-export default function HomeContent({posts}: {posts: Post[]}) {
-  console.log("posts", posts);
-  const { data, isLoading, fetchNextPage, hasNextPage } = usePosts({initialData: posts});
-  const loaderRef = useInfiniteScroll({ hasNextPage: !!hasNextPage, fetchNextPage });
-  console.log("has next page", hasNextPage);
+export default function HomeContent() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const { data, isLoading, error } = usePosts(currentPage);
+
+  const handleNextPage = () => setCurrentPage((prev) => prev + 1);
+  const handlePreviousPage = () => setCurrentPage((prev) => Math.max(prev - 1, 1));
 
   if (isLoading) {
     return (
@@ -19,6 +20,10 @@ export default function HomeContent({posts}: {posts: Post[]}) {
     );
   }
 
+  if (error) {
+    return <p className="text-center text-red-500">Error loading posts.</p>;
+  }
+
   return (
     <main className="max-w-3xl mx-auto px-4 py-8">
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
@@ -26,17 +31,26 @@ export default function HomeContent({posts}: {posts: Post[]}) {
       </div>
 
       <div className="grid gap-4">
-        {data?.pages.flat().map((post) => (
+        {data?.map((post) => (
           <PostCard key={post.id} post={post} />
         ))}
       </div>
 
-      {/* Sentinel element for the IntersectionObserver */}
-      <div id="sentinel" ref={loaderRef} className="h-10" />
-
-      {!hasNextPage && (
-        <p className="text-center mt-4 text-gray-500">You’ve reached the end.</p>
-      )}
+      <div className="flex justify-between mt-6">
+        <button
+          onClick={handlePreviousPage}
+          disabled={currentPage === 1}
+          className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
+        >
+          Previous
+        </button>
+        <button
+          onClick={handleNextPage}
+          className="px-4 py-2 bg-gray-200 rounded"
+        >
+          Next
+        </button>
+      </div>
     </main>
   );
 }

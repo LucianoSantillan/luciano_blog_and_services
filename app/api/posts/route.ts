@@ -7,5 +7,11 @@ export async function GET(request: Request) {
   const page  = Number(searchParams.get("_page")  ?? 1);
 
   const start = (page - 1) * limit;
-  return NextResponse.json(posts.slice(start, start + limit));
+  const paginatedPosts = posts.slice(start, start + limit);
+  const totalPages = Math.ceil(posts.length / limit);
+
+  return NextResponse.json({
+    data: paginatedPosts,
+    totalPages,
+  });
 }
