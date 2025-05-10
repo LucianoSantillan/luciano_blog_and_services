@@ -1,4 +1,4 @@
-import { useQuery } from "@tanstack/react-query";
+// import { useQuery } from "@tanstack/react-query";
 
 export interface Post {
   userId: number;
@@ -7,16 +7,16 @@ export interface Post {
   body: string;
 }
 
-const fetchPost = async (postId: number): Promise<Post> => {
+export const fetchPost = async (postId: number): Promise<Post> => {
   const res = await fetch(
-    `https://jsonplaceholder.typicode.com/posts/${postId}`
+    `http://localhost:3000/posts/${postId}`
   );
   if (!res.ok) throw new Error("Error fetching post");
   return res.json();
 };
 
-export const usePost = (postId: number) =>
-  useQuery<Post, Error>({
-    queryKey: ["post", postId],
-    queryFn: () => fetchPost(postId),
-  });
+// export const usePost = (postId: number) =>
+//   useQuery<Post, Error>({
+//     queryKey: ["post", postId],
+//     queryFn: () => fetchPost(postId),
+//   });

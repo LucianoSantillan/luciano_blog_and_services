@@ -4,23 +4,25 @@ import type { Comment } from "../../_data";
 
 export async function GET(
   _req: Request,
-  { params }: { params: { postId: string } }
+  { params }: { params: Promise<{ postid: string }> }
 ) {
-  const list = comments.filter((c) => c.postId === Number(params.postId));
+  const { postid } = await params;
+  const list = comments.filter((c) => c.postId === Number(postid));
   return NextResponse.json(list);
 }
 
 export async function POST(
   request: Request,
-  { params }: { params: { postId: string } }
+  { params }: { params: Promise<{ postid: string }> }
 ) {
   const data = (await request.json()) as Pick<
     Comment,
     "name" | "email" | "body"
   >;
+  const { postid } = await params;
   const newComment: Comment = {
     ...data,
-    postId: Number(params.postId),
+    postId: Number(postid),
     id: comments.length ? Math.max(...comments.map((c) => c.id)) + 1 : 1,
   };
   comments.push(newComment);

@@ -2,7 +2,6 @@ import { useQuery } from "@tanstack/react-query";
 import { Post } from "@/hooks/usePost";
 
 export const fetchPostsPage = async (page: number): Promise<Post[]> => {
-  console.log("fetchPostsPage", page);
   const res = await fetch(`http://localhost:3000/api/posts?_limit=10&_page=${page}`);
   if (!res.ok) throw new Error("Error fetching posts");
   return res.json();

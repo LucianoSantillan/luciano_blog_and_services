@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 import { Post } from "../hooks/usePost";
-import { useCommentCount } from "../hooks/useCommentCount";
+// import { useCommentCount } from "../hooks/useCommentCount";
 import { useQueryClient } from "@tanstack/react-query";
 
 export function PostCard({ post }: { post: Post }) {
-  const { count, isLoading } = useCommentCount(post.id);
+  // const { count, isLoading } = useCommentCount(post.id);
   const qc = useQueryClient();
 
   // Prefetch the post + comments on hover for snappy navigation
@@ -30,9 +30,9 @@ export function PostCard({ post }: { post: Post }) {
       <h2 className="text-lg font-semibold mb-2">{post.title}</h2>
       <p className="text-sm text-gray-700 line-clamp-3">{post.body}</p>
 
-      <span className="text-xs text-gray-500 mt-3 inline-block">
+      {/* <span className="text-xs text-gray-500 mt-3 inline-block">
         {isLoading ? "…" : `${count} comment${count === 1 ? "" : "s"}`}
-      </span>
+      </span> */}
     </Link>
   );
 }

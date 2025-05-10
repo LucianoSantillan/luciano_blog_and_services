@@ -5,7 +5,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 interface Props {
-  searchParams: { page?: string };
+  searchParams: Promise<{ page?: string }>;
 }
 
 export const revalidate = 60; // ISR
@@ -25,14 +25,14 @@ async function fetchPostsPage(page: number = 1): Promise<Pagination<Post>> {
     { next: { revalidate: 60 } }
   );
   const data = await res.json();
-  console.log("res", data);
   if (!res.ok) throw new Error("Error fetching posts");
   return data;
 }
 
 
 export default async function Home({ searchParams }: Props) {
-  const currentPage = parseInt(searchParams.page || "1", 10);
+  const { page } = await searchParams;
+  const currentPage = parseInt(page || "1", 10);
   const { data: posts, totalPages } = await fetchPostsPage(currentPage);
   const hasMorePages = currentPage < totalPages;
   const hasLessPages = currentPage > 1;
