@@ -1,0 +1,41 @@
+/* Base button styles */
+.button {
+  border-radius: 16px;
+  padding: 12px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+/* Primary button styles */
+.button-primary {
+  background-color: #0047ab; /* Primary color */
+  color: white;
+  border: none;
+}
+
+.button-primary:hover {
+  background-color: #003a8c; /* Darker shade for hover */
+}
+
+.button-primary:focus {
+  box-shadow: 0 0 0 4px rgba(0, 71, 171, 0.5); /* Focus ring */
+}
+
+/* Secondary button styles */
+.button-secondary {
+  background-color: white;
+  color: #0047ab; /* Primary color for text */
+  border: 2px solid #0047ab;
+}
+
+.button-secondary:hover {
+  background-color: #0047ab;
+  color: white;
+}
+
+.button-secondary:focus {
+  box-shadow: 0 0 0 4px rgba(0, 71, 171, 0.5); /* Focus ring */
+}

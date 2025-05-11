@@ -1,13 +1,16 @@
-import "./globals.css";
-import { ReactQueryClientProvider } from "@/providers/ReactQueryClientProvider";
-import { ErrorBoundary } from "@/components/ErrorBoundary";
-import { Inter } from "next/font/google";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import "@/app/globals.css";
+import { Nunito_Sans } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const nunito = Nunito_Sans({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"], // Add weights as needed
+});
 
 export const metadata = {
-  title: "Blog Explorer",
-  description: "Explore JSONPlaceholder posts",
+  title: "My Blog",
+  description: "A blog built with Next.js App Router",
 };
 
 export default function RootLayout({
@@ -17,13 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`bg-gray-50 text-gray-900 ${inter.className}`}>
-        <ReactQueryClientProvider>
-
-          {/* <ErrorBoundary> */}
-            {children}
-            {/* </ErrorBoundary> */}
-          </ReactQueryClientProvider>
+      <body className={`flex flex-col min-h-screen ${nunito.className}`}>
+        <Header />
+        <main className="flex-grow">{children}</main>
+        <Footer />
       </body>
     </html>
   );

@@ -1,6 +1,7 @@
 import { fetchPost } from "../../../hooks/usePost";
 import Link from "next/link";
 import {posts} from "@/app/api/_data";
+import { CommentList } from "@/components/CommentList";
 
 export async function generateStaticParams() {
   return posts.map((post: { id: number }) => ({
@@ -25,7 +26,7 @@ export default async function PostDetailPage({ params }: { params: Promise<{ id:
 
       <h2 className="text-xl font-semibold mb-2">Comments</h2>
       {/* <NewCommentForm postId={Number(id)} /> */}
-      {/* <CommentList postId={Number(id)} /> */}
+      <CommentList postId={Number(id)} />
     </main>
   );
 }
