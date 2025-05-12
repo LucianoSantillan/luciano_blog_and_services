@@ -10,7 +10,6 @@
 }
 
 .services-title {
-  font-size: 2.5rem;
   font-weight: 800;
   margin: 0;
   position: relative;
@@ -25,7 +24,6 @@
 
 .services-row {
   display: flex;
-  flex-wrap: wrap;
   gap: 20px;
   align-items: center;
 }

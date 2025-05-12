@@ -29,14 +29,8 @@
   gap: 16px;
 }
 
-.banner-title {
-  font-size: 2rem;
-  font-weight: 800;
-  margin: 0;
-}
 
 .banner-subtitle {
-  font-size: 1.5rem;
   font-style: italic;
 }
 
@@ -73,9 +67,6 @@
 }
 
 @media (min-width: 1024px) {
-  .banner-title {
-    font-size: 3rem;
-  }
 
   .banner-left {
     display: flex;
@@ -90,7 +81,4 @@
     gap: 20px;
   }
 
-  .banner-subtitle {
-    font-size: 2rem;
-  }
 }
