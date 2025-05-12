@@ -9,6 +9,13 @@
   outline: none;
 }
 
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(2, auto); /* Two columns for the buttons */
+  gap: 16px; /* Space between buttons */
+  justify-content: start; /* Align buttons to the start (left) */
+}
+
 /* Primary button styles */
 .button-primary {
   background-color: #0047ab; /* Primary color */

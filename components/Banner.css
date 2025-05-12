@@ -1,0 +1,96 @@
+/* Section styles */
+.banner {
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  color: #353534;
+  /* Primary text color */
+  padding: 40px 24px;
+  min-width: 100%;
+  height: calc(100vh - 60px);
+  /* Full height minus header */
+  max-height: 600px;
+  display: flex;
+  align-items: center;
+}
+
+.banner-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* Single column for smaller screens */
+  gap: 10px;
+  margin: 0 auto;
+}
+
+/* Left content */
+.banner-left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.banner-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.banner-subtitle {
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+/* Right content */
+.banner-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-image {
+  max-height: 500px;
+  width: auto;
+  border-bottom-left-radius: 80px;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+  z-index: 20;
+}
+
+/* Radial glow */
+.banner-glow {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  height: 384px;
+  width: 384px;
+  transform: translateX(50%);
+  border-radius: 50%;
+  background-color: rgba(0, 71, 171, 0.2);
+  /* Primary color with transparency */
+  filter: blur(48px);
+  pointer-events: none;
+}
+
+@media (min-width: 1024px) {
+  .banner-title {
+    font-size: 3rem;
+  }
+
+  .banner-left {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .banner-container {
+    grid-template-columns: 1fr 1fr;
+    /* Two columns for larger screens */
+    align-items: center;
+    gap: 20px;
+  }
+
+  .banner-subtitle {
+    font-size: 2rem;
+  }
+}

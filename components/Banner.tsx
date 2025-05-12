@@ -1,12 +1,10 @@
-'use client'
-// WebDesignHero.jsx
-// A responsive hero section inspired by the provided mock‑up.
-// TailwindCSS v3+ required. Lucide‑react is used for icons; adjust image/logo paths as needed.
+'use client';
 
 import React from "react";
-import Buttons from "./Button/Button";
 import MenuList from "./MenuList";
 import Button from "./Button/Button";
+import "./Banner.css"; // Import the CSS file for styling
+import { PRIMARY_COLOR_2 } from "@/app/theme";
 
 const defaultBullets = [
   "Sitios Webs profesionales.",
@@ -33,41 +31,43 @@ export default function WebDesignHero({
   imageSrc = "yo_banner.png",
 }) {
   return (
-    <section className="relative isolate overflow-hidden bg-white text-primary-text">
-      <div className="mx-auto flex max-w-7xl flex-col items-center gap-12 px-6 py-24 md:flex-row md:items-start lg:gap-24">
+    <section className="banner section-min-width">
+      <div className="banner-container section-content-max-width">
         {/* LEFT – text content */}
-        <div className="w-full md:w-1/2">
-          <h1 className="text-4xl font-extrabold md:text-6xl">{title}</h1>
-          <h2 className="mt-4 text-2xl italic md:text-3xl">{name}</h2>
+        <div className="banner-left">
+          <h1 className="banner-title">{title}</h1>
+          <h2 style={{color: PRIMARY_COLOR_2}} className="banner-subtitle">{name}</h2>
 
           {/* Menu List */}
           <MenuList bullets={bullets} />
 
-          {/* Buttons */}
-          <Button
-            label={primaryCta}
-            variant="primary"
-            onClick={() => console.log("Primary button clicked")}
-          />
-
-          <Button
-            label={secondaryCta}
-            variant="secondary"
-            onClick={() => console.log("Secondary button clicked")}
-          />        </div>
+          <div className="button-container">
+            <Button
+              label={primaryCta}
+              variant="primary"
+              onClick={() => console.log("Primary button clicked")}
+            />
+            <Button
+              label={secondaryCta}
+              variant="secondary"
+              onClick={() => console.log("Secondary button clicked")}
+            />
+          </div>
+        </div>
 
         {/* RIGHT – developer photo */}
-        <div className="relative w-full md:w-1/2">
+        <div className="banner-right">
           <img
             src={imageSrc}
             alt={name}
-            className="relative z-20 mx-auto max-h-[500px] w-auto rounded-b-[80px] object-cover"
+            className="banner-image"
+            style={{margin: "0px"}}
           />
         </div>
       </div>
 
       {/* Subtle radial glow behind the image area */}
-      <div className="pointer-events-none absolute bottom-0 right-1/2 h-96 w-96 translate-x-1/2 rounded-full bg-primary/20 blur-3xl" />
+      <div className="banner-glow" />
     </section>
   );
 }

@@ -1,0 +1,8 @@
+📐 Breakpoints comunes en aplicaciones web
+Nombre	Ancho (px)	Uso común
+xs	< 480	Teléfonos pequeños (iPhone SE, Android mini)
+sm	≥ 640	Teléfonos estándar (iPhone, Android)
+md	≥ 768	Tablets verticales (iPad, Galaxy Tab)
+lg	≥ 1024	Tablets horizontales / Laptops pequeños
+xl	≥ 1280	Laptops grandes y pantallas de escritorio
+2xl	≥ 1440	Monitores grandes

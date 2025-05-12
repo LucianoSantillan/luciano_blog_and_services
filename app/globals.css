@@ -24,11 +24,18 @@ body {
   color: var(--foreground);
   margin: 0;
   font-family: Arial, sans-serif;
-  color: #353534
+  color: #353534;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 16px;
+.section-min-width {
+  min-width: 100%;
+}
+
+.section-content-max-width {
+  max-width: 1280px;
+}
+
+h1 {
+  margin: 0;
+  line-height: 1.2;
 }

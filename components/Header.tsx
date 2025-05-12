@@ -1,17 +1,19 @@
 import Link from "next/link";
+import logoImg from "@/public/logo.png";
+import { PRIMARY_COLOR } from "@/app/theme";
 
 export default function Header() {
   return (
-    <header className="bg-blue-600 text-white py-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-xl font-bold">My Blog</h1>
+    <header style={{color: "white",  padding: "10px 50px", backgroundColor: PRIMARY_COLOR}} className="section-min-width">
+      <div className="section-content-max-width mx-auto flex justify-between items-center">
+        <img style={{maxHeight: "40px"}} src={logoImg.src} alt="Logo"></img>
         <nav>
           <ul className="flex space-x-4">
             <li>
-              <Link href="/">Home</Link>
+              <Link href="/">Servicios</Link>
             </li>
             <li>
-              <Link href="/about">About</Link>
+              <Link href="/about">Blog</Link>
             </li>
           </ul>
         </nav>

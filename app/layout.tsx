@@ -20,9 +20,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`flex flex-col min-h-screen ${nunito.className}`}>
+      <body className={`flex flex-col ${nunito.className}`}>
         <Header />
-        <main className="flex-grow">{children}</main>
+        <main >{children}</main>
         <Footer />
       </body>
     </html>
