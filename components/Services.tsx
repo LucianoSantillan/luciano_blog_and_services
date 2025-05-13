@@ -8,14 +8,14 @@ export default function Services() {
             <div style={{margin: "auto"}} className="section-content-max-width">
                 <div className="services-header">
                     <h2 className="services-title">Mis Servicios</h2>
-                    <p className="services-description">
+                    <p>
                         Como desarrollador de software web, ayudo a empresas y particulares a crear, optimizar y mejorar su presencia en línea. Ya sea que necesites un sitio web completamente nuevo, mejor rendimiento o una estrategia de SEO más efectiva, ofrezco soluciones personalizadas para alcanzar tus objetivos.
                     </p>
                 </div>
                 <div className="services-row">
                     {/* Left Column */}
                     <div className="services-column services-text">
-                        <h3>Desarrollo y Diseño Web</h3>
+                        <h3>Desarrollo y Diseño Webs</h3>
                         <p>
                             Creo sitios web modernos, responsivos y fáciles de usar que se alinean con tu visión y necesidades comerciales. Ya sea un portafolio personal, un sitio web empresarial o una aplicación web completa, garantizo que la funcionalidad y la estética vayan de la mano.
                         </p>

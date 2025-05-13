@@ -9,22 +9,9 @@
   position: relative;
 }
 
-.services-title {
-  font-weight: 800;
-  margin: 0;
-  position: relative;
-  z-index: 1;
-}
-
-.services-description {
-  font-size: 1.25rem;
-  color: #555;
-  margin-top: 8px;
-}
-
 .services-row {
   display: flex;
-  gap: 20px;
+  gap: 40px;
   align-items: center;
 }
 
