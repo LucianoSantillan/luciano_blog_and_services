@@ -11,8 +11,13 @@
 
 .services-row {
   display: flex;
-  gap: 40px;
+  flex-direction: row;
+  gap: 20px;
   align-items: center;
+}
+
+.services-row-reverse {
+  flex-direction: row-reverse;
 }
 
 .services-column {
@@ -32,4 +37,14 @@
   max-width: 100%;
   height: auto;
   border-radius: 8px;
+}
+
+.link {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.link:hover {
+    color: darkblue;
 }
