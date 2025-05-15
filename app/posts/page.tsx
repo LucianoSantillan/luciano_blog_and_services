@@ -3,6 +3,7 @@ import { PostCard } from "@/app/components/PostCard";
 import { Post } from "@/hooks/usePost";
 import { Metadata } from "next";
 import Link from "next/link";
+import Heading1 from "../design_system/Headings/Heading1/Heading1";
 
 interface Props {
   searchParams: Promise<{ page?: string }>;
@@ -40,7 +41,7 @@ export default async function Home({ searchParams }: Props) {
   return (
     <main className="max-w-3xl mx-auto px-4 py-8">
       <div className="flex justify-between items-center">
-        <h1 className="text-3xl font-bold mb-6">Blog Explorer</h1>
+        <Heading1 className="text-3xl font-bold mb-6">Blog Explorer</Heading1>
       </div>
 
       {posts.length === 0 ? (
