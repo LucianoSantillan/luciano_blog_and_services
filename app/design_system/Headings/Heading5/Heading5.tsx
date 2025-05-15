@@ -1,10 +1,11 @@
-
 import './Heading5.css';
+import { HeadingProps } from '../shared/HeadingProps';
+import '../shared/HeadingSizes.css';
 
-interface Heading5Props extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement> {}
-
-export default function Heading5({children}: Heading5Props) {
+export default function Heading5({ children, className = "", size = "sm", ...rest }: HeadingProps) {
   return (
-    <h5>{children}</h5>
-  );
-}
+    <h5 className={`heading5 heading-${size} ${className}`} {...rest}>
+      {children}ault function Heading5({children}: Heading5Props)
+    </h5>
+  )
+} 

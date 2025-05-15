@@ -1,8 +1,11 @@
-
 import './Heading3.css';
+import { HeadingProps } from '../shared/HeadingProps';
+import '../shared/HeadingSizes.css';
 
-interface Heading3Props extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>{}
-
-export default function Heading3({ children }: Heading3Props) {
-  return <h3>{children}</h3>;
+export default function Heading3({ children, className = "", size = "m", ...rest }: HeadingProps) {
+  return (
+    <h3 className={`heading3 heading-${size} ${className}`} {...rest}>
+      {children}
+    </h3>
+  );
 }

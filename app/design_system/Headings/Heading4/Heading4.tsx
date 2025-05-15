@@ -1,8 +1,11 @@
-
-import { Head } from 'next/document';
 import './Heading4.css';
+import { HeadingProps } from '../shared/HeadingProps';
+import '../shared/HeadingSizes.css';
 
-interface Heading4Props extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement> {}
-export default function Heading4({ children }: Heading4Props) {
-  return <h4>{children}</h4>;
+export default function Heading4({ children, className = "", size = "sm", ...rest }: HeadingProps) {
+  return (
+    <h4 className={`heading4 heading-${size} ${className}`} {...rest}>
+      {children}
+    </h4>
+  );
 }

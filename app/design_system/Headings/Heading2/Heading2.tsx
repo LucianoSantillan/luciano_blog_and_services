@@ -1,9 +1,11 @@
-
-import { DetailedHTMLProps, HTMLAttributes } from 'react';
 import './Heading2.css';
+import { HeadingProps } from '../shared/HeadingProps';
+import '../shared/HeadingSizes.css';
 
-interface Heading2Props extends DetailedHTMLProps<HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement> {}
-
-export default function Heading2({ children }: Heading2Props) {
-  return <h2 className=''>{children}</h2>;
+export default function Heading2({ children, className = "", size = "l", ...rest }: HeadingProps) {
+  return (
+    <h2 className={`heading2 heading-${size} ${className}`} {...rest}>
+      {children}
+    </h2>
+  );
 }
