@@ -1,5 +1,5 @@
-import Banner from "@/components/Banner";
-import Services from "@/components/Services";
+import Banner from "@/app/components/Banner";
+import Services from "@/app/components/Services";
 
 export default function HomePage() {
   return (

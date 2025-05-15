@@ -1,7 +1,7 @@
 import { fetchPost } from "../../../hooks/usePost";
 import Link from "next/link";
 import {posts} from "@/app/api/_data";
-import { CommentList } from "@/components/CommentList";
+import { CommentList } from "@/app/components/CommentList";
 
 export async function generateStaticParams() {
   return posts.map((post: { id: number }) => ({

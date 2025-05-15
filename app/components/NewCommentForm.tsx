@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useAddComment } from "../hooks/useAddComment";
+import { useAddComment } from "../../hooks/useAddComment";
 
 export function NewCommentForm({ postId }: { postId: number }) {
   const [name, setName]   = useState("");

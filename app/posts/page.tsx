@@ -1,5 +1,5 @@
 // app/page.tsx
-import { PostCard } from "@/components/PostCard";
+import { PostCard } from "@/app/components/PostCard";
 import { Post } from "@/hooks/usePost";
 import { Metadata } from "next";
 import Link from "next/link";
