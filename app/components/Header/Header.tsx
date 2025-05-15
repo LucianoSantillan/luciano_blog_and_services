@@ -12,8 +12,8 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import Image from "next/image";
 import { Box } from "@mui/material";
-import { PRIMARY_COLOR, PRIMARY_COLOR_2 } from "../theme";
-import Link from "../design_system/Link/Link"; // Updated to use custom Link component
+import { PRIMARY_COLOR, PRIMARY_COLOR_2 } from "../../theme";
+import Link from "../../design_system/Link/Link"; // Updated to use custom Link component
 
 export default function Header() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -93,16 +93,53 @@ export default function Header() {
       </AppBar>
 
       {/* Drawer for the sidebar menu */}
-      <Drawer anchor="right" open={isDrawerOpen} onClose={toggleDrawer(false)}>
-        <List sx={{ width: 250 }}>
-          <ListItem button component={Link} href="/">
-            <ListItemText primary="Servicios" />
+      <Drawer
+        anchor="right"
+        open={isDrawerOpen}
+        onClose={toggleDrawer(false)}
+        PaperProps={{
+          sx: {
+            backgroundColor: PRIMARY_COLOR_2, // Match the theme color
+            color: "white", // Ensure text is readable
+          },
+        }}
+      >
+        <List sx={{ width: 250, padding: 2 }}>
+          <ListItem
+            button
+            component={Link}
+            href="/"
+            sx={{
+              "&:hover": {
+                backgroundColor: PRIMARY_COLOR, // Add hover effect
+              },
+            }}
+          >
+            <ListItemText primary="Servicios" sx={{ color: "white" }} />
           </ListItem>
-          <ListItem button component={Link} href="/about">
-            <ListItemText primary="Blog" />
+          <ListItem
+            button
+            component={Link}
+            href="/blog"
+            sx={{
+              "&:hover": {
+                backgroundColor: PRIMARY_COLOR, // Add hover effect
+              },
+            }}
+          >
+            <ListItemText primary="Blog" sx={{ color: "white" }} />
           </ListItem>
-          <ListItem button component={Link} href="/contact">
-            <ListItemText primary="Contacto" />
+          <ListItem
+            button
+            component={Link}
+            href="/contact"
+            sx={{
+              "&:hover": {
+                backgroundColor: PRIMARY_COLOR, // Add hover effect
+              },
+            }}
+          >
+            <ListItemText primary="Contacto" sx={{ color: "white" }} />
           </ListItem>
         </List>
       </Drawer>

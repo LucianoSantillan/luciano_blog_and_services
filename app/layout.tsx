@@ -1,4 +1,4 @@
-import Header from "@/app/components/Header";
+import Header from "@/app/components/Header/Header";
 import Footer from "@/app/components/Footer";
 import "@/app/globals.css";
 import { Nunito_Sans } from "next/font/google";
