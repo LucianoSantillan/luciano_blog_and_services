@@ -1,0 +1,3 @@
+Project uses NextJs 15. Project uses TypeScript. If any import or dependency is missing in your Context please add it or ask me to do it. For example if i ask you to use my design_system folder components and it is not included. For Typography i have my own design system in design_system/Headings/... so use it for text always.
+5. For Links i use Link \app\design_system\Link\Link.tsx
+6. If a library importe

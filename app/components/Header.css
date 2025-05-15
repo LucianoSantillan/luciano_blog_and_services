@@ -15,7 +15,8 @@
 }
 
 .header-logo {
-    max-height: 30px;
+    max-height: 40px;
+    margin-right: 1rem;
     /* Mobile logo size */
 }
 

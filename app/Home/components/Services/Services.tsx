@@ -13,7 +13,7 @@ import Heading2 from "@/app/design_system/Headings/Heading2/Heading2";
 
 export default function Services() {
     return (
-        <section id="services" className="section section-min-width services-section">
+        <section id="servicios" className="section section-min-width services-section">
             <div style={{ margin: "auto" }} className="section-content-max-width">
                 <div className="services-header">
                     <Heading2 className="services-title">Servicios</Heading2>
