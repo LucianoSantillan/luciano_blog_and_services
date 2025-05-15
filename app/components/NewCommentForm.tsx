@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useAddComment } from "../../hooks/useAddComment";
+import Heading3 from "../design_system/Headings/Heading3/Heading3";
 
 export function NewCommentForm({ postId }: { postId: number }) {
   const [name, setName]   = useState("");
@@ -18,7 +19,7 @@ export function NewCommentForm({ postId }: { postId: number }) {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-2 mt-6">
-      <h3 className="font-semibold">Add a comment</h3>
+      <Heading3 className="font-semibold">Add a comment</Heading3>
 
       <input
         className="w-full border rounded p-2"

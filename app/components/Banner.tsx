@@ -5,6 +5,8 @@ import MenuList from "./MenuList";
 import Button from "./Button/Button";
 import "./Banner.css"; // Import the CSS file for styling
 import { PRIMARY_COLOR_2 } from "@/app/theme";
+import Heading1 from "../design_system/Headings/Heading1/Heading1";
+import Heading2 from "../design_system/Headings/Heading2/Heading2";
 
 const defaultBullets = [
   "Sitios Webs profesionales.",
@@ -35,9 +37,10 @@ export default function WebDesignHero({
       <div className="banner-container section-content-max-width">
         {/* LEFT – text content */}
         <div className="banner-left">
-          <h1 className="banner-title">{title}</h1>
-          <h2 style={{color: PRIMARY_COLOR_2}} className="banner-subtitle">{name}</h2>
-
+          <Heading1 className="banner-title">{title}</Heading1>
+          <Heading2 className="banner-subtitle" style={{color: PRIMARY_COLOR_2}}> 
+            {name}
+          </Heading2>    
           {/* Menu List */}
           <MenuList bullets={bullets} />
 

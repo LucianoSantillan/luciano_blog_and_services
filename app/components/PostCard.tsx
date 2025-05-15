@@ -4,6 +4,9 @@ import Link from "next/link";
 import { Post } from "../../hooks/usePost";
 // import { useCommentCount } from "../hooks/useCommentCount";
 import { useQueryClient } from "@tanstack/react-query";
+import Head from "next/head";
+import { Heading } from "lucide-react";
+import Heading2 from "../design_system/Headings/Heading2/Heading2";
 
 export function PostCard({ post }: { post: Post }) {
   // const { count, isLoading } = useCommentCount(post.id);
@@ -27,7 +30,7 @@ export function PostCard({ post }: { post: Post }) {
       onMouseEnter={prefetch}
       className="block bg-white rounded-xl p-6 shadow hover:shadow-md transition"
     >
-      <h2 className="text-lg font-semibold mb-2">{post.title}</h2>
+      <Heading2 className="text-xl font-semibold mb-2">{post.title}</Heading2>
       <p className="text-sm text-gray-700 line-clamp-3">{post.body}</p>
 
       {/* <span className="text-xs text-gray-500 mt-3 inline-block">

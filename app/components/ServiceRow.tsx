@@ -1,6 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import { ReactNode } from "react";
 import "./Services.css";
+import Heading3 from "../design_system/Headings/Heading3/Heading3";
 
 interface ServiceRowProps {
     title: string;
@@ -15,7 +16,7 @@ export default function ServiceRow({ title, description, imgSrc, imgAlt, reverse
         <div className={`services-row ${reverse ? "services-row-reverse" : ""}`}>
             {/* Text Column */}
             <div className="services-column services-text">
-                <h3>{title}</h3>
+                <Heading3>{title}</Heading3>
                 <div>{description}</div> {/* Render the description as ReactNode */}
             </div>
             {/* Image Column */}

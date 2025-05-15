@@ -2,8 +2,10 @@
 import './Heading6.css';
 
 
-export default function Heading6({children}: {children: React.ReactNode}) {
+interface Heading6Props extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement> {}
+
+export default function Heading6({children}: Heading6Props) {
   return (
-    <h5>{children}</h5>
+    <h6>{children}</h6>
   );
 }

@@ -9,13 +9,14 @@ import performanceImg from "@/public/performance_service.png"; // Adjust the pat
 import eccomerceImg from "@/public/ecommerce.png"; // Adjust the path as necessary
 import designImg from "@/public/design.png"; // Adjust the path as necessary
 import securityImg from "@/public/security.png"; // Adjust the path as necessary
+import Heading2 from "../design_system/Headings/Heading2/Heading2";
 
 export default function Services() {
     return (
         <section className="section section-min-width services-section">
             <div style={{ margin: "auto" }} className="section-content-max-width">
                 <div className="services-header">
-                    <h2 className="services-title">Mis Servicios</h2>
+                    <Heading2 className="services-title">Servicios</Heading2>
                     <p>
                         Como desarrollador de software web, ayudo a empresas y particulares a crear, optimizar y mejorar su presencia en línea. Ya sea que necesites un sitio web completamente nuevo, mejor rendimiento o una estrategia de SEO más efectiva, ofrezco soluciones personalizadas para alcanzar tus objetivos.
                     </p>
