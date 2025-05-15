@@ -1,7 +1,7 @@
 'use client';
 import "./Services.css";
-import ServiceRow from "./ServiceRow";
-import MenuList from "./MenuList"; // Import MenuList for the list items
+import ServiceRow from "./components/ServiceRow/ServiceRow";
+import MenuList from "../../../components/MenuList"; // Import MenuList for the list items
 import Link from "next/link"; // Import Next.js Link component
 import devAndDesignImgSrc from "@/public/development_and_design_img.png"; // Adjust the path as necessary
 import seoImg from "@/public/seo_optimization.png"; // Adjust the path as necessary
@@ -9,11 +9,11 @@ import performanceImg from "@/public/performance_service.png"; // Adjust the pat
 import eccomerceImg from "@/public/ecommerce.png"; // Adjust the path as necessary
 import designImg from "@/public/design.png"; // Adjust the path as necessary
 import securityImg from "@/public/security.png"; // Adjust the path as necessary
-import Heading2 from "../design_system/Headings/Heading2/Heading2";
+import Heading2 from "@/app/design_system/Headings/Heading2/Heading2";
 
 export default function Services() {
     return (
-        <section className="section section-min-width services-section">
+        <section id="services" className="section section-min-width services-section">
             <div style={{ margin: "auto" }} className="section-content-max-width">
                 <div className="services-header">
                     <Heading2 className="services-title">Servicios</Heading2>

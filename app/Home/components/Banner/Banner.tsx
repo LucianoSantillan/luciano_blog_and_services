@@ -1,12 +1,12 @@
 'use client';
 
 import React from "react";
-import MenuList from "./MenuList";
-import Button from "./Button/Button";
+import MenuList from "@/app/components/MenuList";
+import Button from "@/app/design_system/Button/Button";
 import "./Banner.css"; // Import the CSS file for styling
 import { PRIMARY_COLOR_2 } from "@/app/theme";
-import Heading1 from "../design_system/Headings/Heading1/Heading1";
-import Heading2 from "../design_system/Headings/Heading2/Heading2";
+import Heading1 from "@/app/design_system/Headings/Heading1/Heading1";
+import Heading2 from "@/app/design_system/Headings/Heading2/Heading2";
 
 const defaultBullets = [
   "Sitios Webs profesionales.",
@@ -45,16 +45,20 @@ export default function WebDesignHero({
           <MenuList bullets={bullets} />
 
           <div className="button-container">
-            <Button
-              label={primaryCta}
-              variant="primary"
-              onClick={() => console.log("Primary button clicked")}
-            />
+            <a href="#services" style={{ textDecoration: "none" }}>
+              <Button
+                label={primaryCta}
+                variant="primary"
+                // onClick={() => console.log("Primary button clicked")}
+              />
+            </a>
+            <a href="#contact-sesion" style={{ textDecoration: "none" }}>
             <Button
               label={secondaryCta}
               variant="secondary"
               onClick={() => console.log("Secondary button clicked")}
             />
+            </a>
           </div>
         </div>
 
