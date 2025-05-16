@@ -1,5 +1,5 @@
 // app/page.tsx
-import { PostCard } from "@/app/[locale]/components/PostCard";
+import { PostCard } from "@/app/components/PostCard";
 import { Post } from "@/hooks/usePost";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -60,7 +60,6 @@ export default async function Home({ searchParams }: Props) {
           href={`/?page=${currentPage - 1}`}
           className={`px-4 py-2 bg-gray-200 rounded ${!hasLessPages ? "opacity-50 pointer-events-none" : ""
             }`}
-          // scroll={false}
           aria-disabled={!hasLessPages}
           tabIndex={-1}
         >
@@ -70,7 +69,6 @@ export default async function Home({ searchParams }: Props) {
           href={`/?page=${currentPage + 1}`}
           className={`px-4 py-2 bg-gray-200 rounded ${!hasMorePages ? "opacity-50 pointer-events-none" : ""
             }`}
-          // scroll={false}
           aria-disabled={!hasMorePages}
           tabIndex={-1}
         >

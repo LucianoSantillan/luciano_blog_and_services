@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Post } from "../../../hooks/usePost";
+import { Post } from "@/hooks/usePost";
 // import { useCommentCount } from "../hooks/useCommentCount";
 import { useQueryClient } from "@tanstack/react-query";
 import Head from "next/head";

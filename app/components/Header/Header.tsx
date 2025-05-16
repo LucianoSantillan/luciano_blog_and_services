@@ -103,49 +103,79 @@ export default function Header({ translations }: HeaderProps) {
       >
         <List sx={{ width: 250, padding: 2, display: "flex", flexDirection: "column", gap: 2 }}>
           <ListItem
-            button
-            component={Link}
-             href={`/${translations.servicesId}`}
             sx={{
               "&:hover": {
                 backgroundColor: PRIMARY_COLOR, // Add hover effect
               },
+              padding: 0,
             }}
           >
-            <ListItemText
-              sx={{ fontSize: fontSizes.sm }}
-              primary={translations.services}
-            />
+            <Link
+              href={`/${translations.servicesId}`}
+              style={{
+                display: "block",
+                width: "100%",
+                padding: "16px",
+                color: "inherit",
+                textDecoration: "none",
+                fontSize: fontSizes.sm,
+              }}
+            >
+              <ListItemText
+                primary={translations.services}
+                sx={{ fontSize: fontSizes.sm }}
+              />
+            </Link>
           </ListItem>
           <ListItem
-            button
-            component={Link}
-             href={`/${translations.blogId}`}
             sx={{
               "&:hover": {
                 backgroundColor: PRIMARY_COLOR, // Add hover effect
               },
+              padding: 0,
             }}
           >
-            <ListItemText
-              sx={{ fontSize: fontSizes.sm }}
-              primary={translations.blog}
-            />
+            <Link
+              href={`/${translations.blogId}`}
+              style={{
+                display: "block",
+                width: "100%",
+                padding: "16px",
+                color: "inherit",
+                textDecoration: "none",
+                fontSize: fontSizes.sm,
+              }}
+            >
+              <ListItemText
+                primary={translations.blog}
+                sx={{ fontSize: fontSizes.sm }}
+              />
+            </Link>
           </ListItem>
           <ListItem
-            button
-            component={Link}
-            href={`/${translations.contactId}`}
             sx={{
               "&:hover": {
                 backgroundColor: PRIMARY_COLOR, // Add hover effect
               },
+              padding: 0,
             }}
           >
-            <ListItemText
-              sx={{ fontSize: fontSizes.sm }}
-              primary={translations.contact}
-            />
+            <Link
+              href={`/${translations.contactId}`}
+              style={{
+                display: "block",
+                width: "100%",
+                padding: "16px",
+                color: "inherit",
+                textDecoration: "none",
+                fontSize: fontSizes.sm,
+              }}
+            >
+              <ListItemText
+                primary={translations.contact}
+                sx={{ fontSize: fontSizes.sm }}
+              />
+            </Link>
           </ListItem>
         </List>
       </Drawer>
