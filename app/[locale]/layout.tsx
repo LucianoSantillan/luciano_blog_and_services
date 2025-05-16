@@ -2,6 +2,9 @@ import Header from "@/app/[locale]/components/Header/Header";
 import Footer from "@/app/[locale]/components/Footer";
 import "@/app/globals.css";
 import { Nunito_Sans } from "next/font/google";
+import { hasLocale } from "next-intl";
+import { notFound } from "next/navigation";
+import { routing } from "../../src/i18n/routing";
 
 const nunito = Nunito_Sans({
   subsets: ["latin"],
@@ -13,11 +16,19 @@ export const metadata = {
   description: "A blog built with Next.js App Router",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: Promise<{locale: string}>;
 }) {
+
+    const {locale} = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
   return (
     <html lang="en">
       <body className={`flex flex-col ${nunito.className}`}>
