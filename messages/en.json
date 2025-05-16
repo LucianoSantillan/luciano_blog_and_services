@@ -1,5 +1,4 @@
 {
-
     "Header": {
         "services": "Services",
         "blog": "Blog",
@@ -7,5 +6,17 @@
         "contactId": "contact",
         "servicesId": "services",
         "blogId": "blog"
+    },
+    "Banner": {
+        "title": "Web Design Barcelona",
+        "name": "Luciano Santillan",
+        "bullets": [
+            "Professional websites.",
+            "Visually appealing and functional.",
+            "User-friendly.",
+            "Without relying on an expensive agency."
+        ],
+        "primaryCta": "Services",
+        "secondaryCta": "Contact me"
     }
 }

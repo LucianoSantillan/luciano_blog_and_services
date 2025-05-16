@@ -6,5 +6,17 @@
         "contactId": "contacto",
         "servicesId": "servicios",
         "blogId": "blog"
+    },
+    "Banner": {
+        "title": "Diseño Web Barcelona",
+        "name": "Luciano Santillan",
+        "bullets": [
+            "Sitios Webs profesionales.",
+            "Visualmente atractivos y funcionales.",
+            "Intuitivos para el usuario.",
+            "Sin recurrir a una agencia costosa."
+        ],
+        "primaryCta": "Servicios",
+        "secondaryCta": "¡Contacta!"
     }
 }
