@@ -3,7 +3,7 @@ import { PostCard } from "@/app/[locale]/components/PostCard/PostCard";
 import { Post } from "@/hooks/usePost";
 import { Metadata } from "next";
 import Link from "next/link";
-import Heading1 from "../design_system/Headings/Heading1/Heading1";
+import Heading1 from "../../design_system/Headings/Heading1/Heading1";
 
 interface Props {
   searchParams: Promise<{ page?: string }>;

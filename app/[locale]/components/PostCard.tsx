@@ -6,7 +6,7 @@ import { Post } from "../../../hooks/usePostost";
 import { useQueryClient } from "@tanstack/react-query";
 import Head from "next/head";
 import { Heading } from "lucide-react";
-import Heading2 from "../design_system/Headings/Heading2/Heading2";
+import Heading2 from "../../design_system/Headings/Heading2/Heading2";
 
 export function PostCard({ post }: { post: Post }) {
   // const { count, isLoading } = useCommentCount(post.id);

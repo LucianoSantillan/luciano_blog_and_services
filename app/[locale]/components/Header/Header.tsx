@@ -12,9 +12,9 @@ import ListItemText from "@mui/material/ListItemText";
 import Image from "next/image";
 import { Box } from "@mui/material";
 import { PRIMARY_COLOR, PRIMARY_COLOR_2 } from "@/app/theme";
-import Link from "../../design_system/Link/Link"; // Updated to use custom Link component
-import Heading3 from "@/app/[locale]/design_system/Text/Headings/Heading3/Heading3"; // Replace Typography with Heading3
-import { fontSizes } from "@/app/[locale]/design_system/Text/Headings/shared/fontSizes";
+import Link from "../../../design_system/Link/Link"; // Updated to use custom Link component
+import Heading3 from "@/app/design_system/Text/Headings/Heading3/Heading3"; // Replace Typography with Heading3
+import { fontSizes } from "@/app/design_system/Text/Headings/shared/fontSizes";
 
 export default function Header() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);

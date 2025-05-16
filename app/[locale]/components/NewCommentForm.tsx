@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useAddComment } from "../../../hooks/useAddCommentent";
-import Heading3 from "../design_system/Headings/Heading3/Heading3";
+import Heading3 from "../../design_system/Headings/Heading3/Heading3";
 
 export function NewCommentForm({ postId }: { postId: number }) {
   const [name, setName]   = useState("");

@@ -2,11 +2,11 @@
 
 import React from "react";
 import MenuList from "@/app/[locale]/components/MenuList";
-import Button from "@/app/[locale]/design_system/Button/Button";
+import Button from "@/app/design_system/Button/Button";
 import "./Banner.css"; // Import the CSS file for styling
 import { PRIMARY_COLOR_2 } from "@/app/theme";
-import Heading1 from "@/app/[locale]/design_system/Text/Headings/Heading1/Heading1";
-import Heading2 from "@/app/[locale]/design_system/Text/Headings/Heading2/Heading2";
+import Heading1 from "@/app/design_system/Text/Headings/Heading1/Heading1";
+import Heading2 from "@/app/design_system/Text/Headings/Heading2/Heading2";
 
 const defaultBullets = [
   "Sitios Webs profesionales.",
