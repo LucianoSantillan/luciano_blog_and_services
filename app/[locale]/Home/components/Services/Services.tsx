@@ -1,7 +1,7 @@
 'use client';
 import "./Services.css";
 import ServiceRow from "./components/ServiceRow/ServiceRow";
-import MenuList from "../../../components/MenuList"; // Import MenuList for the list items
+import MenuList from "@/app/components/MenuList"; // Import MenuList for the list items
 import Link from "next/link"; // Import Next.js Link component
 import devAndDesignImgSrc from "@/public/development_and_design_img.png"; // Adjust the path as necessary
 import seoImg from "@/public/seo_optimization.png"; // Adjust the path as necessary

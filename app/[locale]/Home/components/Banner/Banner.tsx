@@ -1,7 +1,7 @@
 'use client';
 
 import React from "react";
-import MenuList from "@/app/[locale]/components/MenuList";
+import MenuList from "@/app/components/MenuList";
 import Button from "@/app/design_system/Button/Button";
 import "./Banner.css"; // Import the CSS file for styling
 import { PRIMARY_COLOR_2 } from "@/app/theme";

@@ -12,7 +12,7 @@ import ListItemText from "@mui/material/ListItemText";
 import Image from "next/image";
 import { Box } from "@mui/material";
 import { PRIMARY_COLOR, PRIMARY_COLOR_2 } from "@/app/theme";
-import Link from "../../../design_system/Link/Link"; // Updated to use custom Link component
+import Link from "@/app/design_system/Link/Link"; // Updated to use custom Link component
 import { fontSizes } from "@/app/design_system/Text/Headings/shared/fontSizes";
 
 interface HeaderProps {
