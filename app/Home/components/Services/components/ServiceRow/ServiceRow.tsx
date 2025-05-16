@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import { ReactNode } from "react";
 import "@/app/Home/components/Services/Services.css"; // Import the CSS file for styles
-import Heading3 from "../../../../../design_system/Headings/Heading3/Heading3";
+import Heading3 from "@/app/design_system/Text/Headings/Heading3/Heading3";
 
 interface ServiceRowProps {
     title: string;

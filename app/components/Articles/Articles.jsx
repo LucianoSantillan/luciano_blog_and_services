@@ -1,4 +1,4 @@
-import Heading2 from '@/app/design_system/Headings/Heading2/Heading2';
+import Heading2 from '@/app/design_system/Text/Headings/Heading2/Heading2';
 import './Articles.css';
 import Link from '@/app/design_system/Link/Link';
 import Image from 'next/image';

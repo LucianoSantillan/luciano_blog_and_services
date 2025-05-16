@@ -9,7 +9,7 @@ import performanceImg from "@/public/performance_service.png"; // Adjust the pat
 import eccomerceImg from "@/public/ecommerce.png"; // Adjust the path as necessary
 import designImg from "@/public/design.png"; // Adjust the path as necessary
 import securityImg from "@/public/security.png"; // Adjust the path as necessary
-import Heading2 from "@/app/design_system/Headings/Heading2/Heading2";
+import Heading2 from "@/app/design_system/Text/Headings/Heading2/Heading2";
 
 export default function Services() {
     return (
