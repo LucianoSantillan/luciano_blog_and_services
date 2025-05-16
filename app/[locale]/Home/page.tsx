@@ -10,9 +10,7 @@ export default function HomePage() {
 
   return (
     <>
-      <h1>{t('title')}</h1>
       <Banner />
-      {/* <HomeContent /> */}
       <Services />
       <Articles />
       <Contact />
