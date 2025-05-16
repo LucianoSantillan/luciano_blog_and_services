@@ -45,14 +45,14 @@ export default function WebDesignHero({
           <MenuList bullets={bullets} />
 
           <div className="button-container">
-            <a href="#services" style={{ textDecoration: "none" }}>
+            <a href="#servicios" style={{ textDecoration: "none" }}>
               <Button
                 label={primaryCta}
                 variant="primary"
                 // onClick={() => console.log("Primary button clicked")}
               />
             </a>
-            <a href="#contact-sesion" style={{ textDecoration: "none" }}>
+            <a href="#contacto" style={{ textDecoration: "none" }}>
             <Button
               label={secondaryCta}
               variant="secondary"
