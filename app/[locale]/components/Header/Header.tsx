@@ -20,11 +20,15 @@ interface HeaderProps {
     services: string;
     blog: string;
     contact: string;
+    contactId: string;
+    servicesId: string;
+    blogId: string;
   };
 }
 
 export default function Header({ translations }: HeaderProps) {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
 
   const toggleDrawer = (open: boolean) => () => {
     setIsDrawerOpen(open);
@@ -62,13 +66,13 @@ export default function Header({ translations }: HeaderProps) {
               gap: 3,
             }}
           >
-            <Link href="/#servicios" passHref style={{ fontSize: fontSizes.sm }}>
+            <Link href={`/${translations.servicesId}`} passHref style={{ fontSize: fontSizes.sm }}>
               {translations.services}
             </Link>
-            <Link href="/blog" passHref style={{ fontSize: fontSizes.sm }}>
+            <Link href={`/${translations.blogId}`} passHref style={{ fontSize: fontSizes.sm }}>
               {translations.blog}
             </Link>
-            <Link href="/#contacto" passHref style={{ fontSize: fontSizes.sm }}>
+            <Link href={`/${translations.contactId}`} passHref style={{ fontSize: fontSizes.sm }}>
               {translations.contact}
             </Link>
           </Box>
@@ -101,7 +105,7 @@ export default function Header({ translations }: HeaderProps) {
           <ListItem
             button
             component={Link}
-            href="/"
+             href={`/${translations.servicesId}`}
             sx={{
               "&:hover": {
                 backgroundColor: PRIMARY_COLOR, // Add hover effect
@@ -116,7 +120,7 @@ export default function Header({ translations }: HeaderProps) {
           <ListItem
             button
             component={Link}
-            href="/blog"
+             href={`/${translations.blogId}`}
             sx={{
               "&:hover": {
                 backgroundColor: PRIMARY_COLOR, // Add hover effect
@@ -131,7 +135,7 @@ export default function Header({ translations }: HeaderProps) {
           <ListItem
             button
             component={Link}
-            href="/contact"
+            href={`/${translations.contactId}`}
             sx={{
               "&:hover": {
                 backgroundColor: PRIMARY_COLOR, // Add hover effect

@@ -5,6 +5,9 @@
     "Header": {
         "services": "Servicios",
         "blog": "Blog",
-        "contact": "Contacto"
+        "contact": "Contacto",
+        "contactId": "contacto",
+        "servicesId": "servicios",
+        "blogId": "blog"
     }
 }

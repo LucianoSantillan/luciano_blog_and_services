@@ -35,7 +35,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body className={`flex flex-col ${nunito.className}`}>
-        <Header translations={messages?.Header ?? { services: "", blog: "", contact: "" }} />
+        <Header translations={messages?.Header ?? { services: "", blog: "", contact: "", contactId:"contact" }} />
         <main>{children}</main>
         <Footer />
       </body>
