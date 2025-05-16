@@ -1,7 +1,7 @@
-import { fetchPost } from "../../../hooks/usePost";
+import { fetchPost } from "../../../../hooks/usePostost";
 import Link from "next/link";
 import { posts } from "@/app/api/_data";
-import { CommentList } from "@/app/components/CommentList";
+import { CommentList } from "@/app/[locale]/components/CommentListmmentList";
 import Heading1 from "@/app/design_system/Headings/Heading1/Heading1";
 import Heading2 from "@/app/design_system/Headings/Heading2/Heading2";
 

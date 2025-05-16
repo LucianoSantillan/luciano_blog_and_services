@@ -1,9 +1,9 @@
 // app/page.tsx
-// import { PostCard } from "@/app/components/PostCard";
+import { PostCard } from "@/app/[locale]/components/PostCard/PostCard";
 import { Post } from "@/hooks/usePost";
 import { Metadata } from "next";
 import Link from "next/link";
-// import Heading1 from "@app/[locale]/design_system/Headings/Heading1/Heading1";
+import Heading1 from "../design_system/Headings/Heading1/Heading1";
 
 interface Props {
   searchParams: Promise<{ page?: string }>;
@@ -41,8 +41,7 @@ export default async function Home({ searchParams }: Props) {
   return (
     <main className="max-w-3xl mx-auto px-4 py-8">
       <div className="flex justify-between items-center">
-
-        // <Heading1 className="text-3xl font-bold mb-6">Blog Explorer</Heading1>
+        <Heading1 className="text-3xl font-bold mb-6">Blog Explorer</Heading1>
       </div>
 
       {posts.length === 0 ? (
@@ -50,7 +49,7 @@ export default async function Home({ searchParams }: Props) {
       ) : (
         <div className="grid gap-4">
           {posts.map((post) => (
-            // <PostCard key={post.id} post={post} />
+            <PostCard key={post.id} post={post} />
           ))}
         </div>
       )}

@@ -1,7 +1,7 @@
 'use client'
 import { useInfiniteScroll } from "@/hooks/useInfiniteScroll";
-import { useComments } from "../../hooks/useComments";
-import { useDeleteComment } from "../../hooks/useDeleteComment";
+import { useComments } from "../../../hooks/useCommentsnts";
+import { useDeleteComment } from "../../../hooks/useDeleteCommentent";
 
 export function CommentList({ postId }: { postId: number }) {
   const { data: comments, isLoading, error, hasNextPage, fetchNextPage } = useComments(postId);
