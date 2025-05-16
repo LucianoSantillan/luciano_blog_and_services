@@ -1,7 +1,4 @@
 {
-    "HomePage" : {
-        "title": "Página de inicio"
-    },
     "Header": {
         "services": "Servicios",
         "blog": "Blog",
