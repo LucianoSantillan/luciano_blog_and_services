@@ -1,6 +1,6 @@
-import { PostCard } from "@/app/[locale]/components/PostCard/PostCard";
+import { PostCard } from "@/app/[locale]/components/PostCard";
 import { Post } from "@/app/api/_data";
-import Heading1 from "@/app/design_system/Headings/Heading1/Heading1";
+import Heading1 from "@/app/design_system/Text/Headings/Heading1/Heading1";
 import Link from "@/app/design_system/Link/Link";
 
 interface Pagination<Data> {

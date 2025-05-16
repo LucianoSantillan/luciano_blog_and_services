@@ -5,6 +5,7 @@ import { Nunito_Sans } from "next/font/google";
 import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "../../src/i18n/routing";
+import  getRequestConfig  from "@/src/i18n/request";
 
 const nunito = Nunito_Sans({
   subsets: ["latin"],
@@ -21,19 +22,21 @@ export default async function RootLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{locale: string}>;
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
 
-    const {locale} = await params;
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
 
+  const { messages } = await getRequestConfig({ requestLocale: Promise.resolve(locale) });
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body className={`flex flex-col ${nunito.className}`}>
-        <Header />
-        <main >{children}</main>
+        <Header translations={messages?.Header ?? { services: "", blog: "", contact: "" }} />
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

@@ -13,10 +13,17 @@ import Image from "next/image";
 import { Box } from "@mui/material";
 import { PRIMARY_COLOR, PRIMARY_COLOR_2 } from "@/app/theme";
 import Link from "../../../design_system/Link/Link"; // Updated to use custom Link component
-import Heading3 from "@/app/design_system/Text/Headings/Heading3/Heading3"; // Replace Typography with Heading3
 import { fontSizes } from "@/app/design_system/Text/Headings/shared/fontSizes";
 
-export default function Header() {
+interface HeaderProps {
+  translations: {
+    services: string;
+    blog: string;
+    contact: string;
+  };
+}
+
+export default function Header({ translations }: HeaderProps) {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const toggleDrawer = (open: boolean) => () => {
@@ -56,14 +63,13 @@ export default function Header() {
             }}
           >
             <Link href="/#servicios" passHref style={{ fontSize: fontSizes.sm }}>
-              Servicios
+              {translations.services}
             </Link>
             <Link href="/blog" passHref style={{ fontSize: fontSizes.sm }}>
-
-              Blog
+              {translations.blog}
             </Link>
             <Link href="/#contacto" passHref style={{ fontSize: fontSizes.sm }}>
-              Contacto
+              {translations.contact}
             </Link>
           </Box>
           {/* Burger menu for smaller screens */}
@@ -104,9 +110,7 @@ export default function Header() {
           >
             <ListItemText
               sx={{ fontSize: fontSizes.sm }}
-              primary={
-                "Servicios"
-              }
+              primary={translations.services}
             />
           </ListItem>
           <ListItem
@@ -121,9 +125,7 @@ export default function Header() {
           >
             <ListItemText
               sx={{ fontSize: fontSizes.sm }}
-              primary={
-                "Blog"
-              }
+              primary={translations.blog}
             />
           </ListItem>
           <ListItem
@@ -138,9 +140,7 @@ export default function Header() {
           >
             <ListItemText
               sx={{ fontSize: fontSizes.sm }}
-              primary={
-                "Contacto"
-              }
+              primary={translations.contact}
             />
           </ListItem>
         </List>

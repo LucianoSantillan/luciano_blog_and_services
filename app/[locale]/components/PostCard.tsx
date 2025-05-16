@@ -1,12 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { Post } from "../../../hooks/usePostost";
+import { Post } from "../../../hooks/usePost";
 // import { useCommentCount } from "../hooks/useCommentCount";
 import { useQueryClient } from "@tanstack/react-query";
 import Head from "next/head";
 import { Heading } from "lucide-react";
-import Heading2 from "../../design_system/Headings/Heading2/Heading2";
+import Heading2 from "@/app/design_system/Text/Headings/Heading2/Heading2";
 
 export function PostCard({ post }: { post: Post }) {
   // const { count, isLoading } = useCommentCount(post.id);
