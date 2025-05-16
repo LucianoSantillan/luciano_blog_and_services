@@ -14,6 +14,7 @@ import { Box } from "@mui/material";
 import { PRIMARY_COLOR, PRIMARY_COLOR_2 } from "../../theme";
 import Link from "../../design_system/Link/Link"; // Updated to use custom Link component
 import Heading3 from "@/app/design_system/Text/Headings/Heading3/Heading3"; // Replace Typography with Heading3
+import { fontSizes } from "@/app/design_system/Text/Headings/shared/fontSizes";
 
 export default function Header() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -54,29 +55,15 @@ export default function Header() {
               gap: 3,
             }}
           >
-            <Link href="/#servicios" passHref>
-              <Heading3
-                className="text-white"
-                style={{ textDecoration: "none" }}
-              >
-                Servicios
-              </Heading3>
+            <Link href="/#servicios" passHref style={{ fontSize: fontSizes.sm }}>
+              Servicios
             </Link>
-            <Link href="/blog" passHref>
-              <Heading3
-                className="text-white"
-                style={{ textDecoration: "none" }}
-              >
-                Blog
-              </Heading3>
+            <Link href="/blog" passHref style={{ fontSize: fontSizes.sm }}>
+
+              Blog
             </Link>
-            <Link href="/#contacto" passHref>
-              <Heading3
-                className="text-white"
-                style={{ textDecoration: "none" }}
-              >
-                Contacto
-              </Heading3>
+            <Link href="/#contacto" passHref style={{ fontSize: fontSizes.sm }}>
+              Contacto
             </Link>
           </Box>
           {/* Burger menu for smaller screens */}
@@ -116,8 +103,9 @@ export default function Header() {
             }}
           >
             <ListItemText
+              sx={{ fontSize: fontSizes.sm }}
               primary={
-                <Heading3 className="text-white">Servicios</Heading3>
+                "Servicios"
               }
             />
           </ListItem>
@@ -132,8 +120,9 @@ export default function Header() {
             }}
           >
             <ListItemText
+              sx={{ fontSize: fontSizes.sm }}
               primary={
-                <Heading3 className="text-white">Blog</Heading3>
+                "Blog"
               }
             />
           </ListItem>
@@ -148,8 +137,9 @@ export default function Header() {
             }}
           >
             <ListItemText
+              sx={{ fontSize: fontSizes.sm }}
               primary={
-                <Heading3 className="text-white">Contacto</Heading3>
+                "Contacto"
               }
             />
           </ListItem>
