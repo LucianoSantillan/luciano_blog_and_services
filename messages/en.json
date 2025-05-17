@@ -18,5 +18,54 @@
         ],
         "primaryCta": "Services",
         "secondaryCta": "Contact"
+    },
+    "Services": {
+        "intro": "As a web software developer, I help businesses and individuals create, optimize, and improve their online presence. Whether you need a brand-new website, better performance, or a more effective SEO strategy, I offer tailored solutions to achieve your goals.",
+        "devAndDesign": {
+            "title": "Web Development and Design",
+            "description1": "I create modern, responsive, and user-friendly websites that align with your vision and business needs. Whether it's a personal portfolio, a business website, or a full web application, I ensure functionality and aesthetics go hand in hand.",
+            "description2": "Learn more about",
+            "cta": "My Web Development and Design Service!",
+            "imgAlt": "Custom Software Development"
+        },
+        "seo": {
+            "title": "SEO Optimization",
+            "description1": "Having a great website is not enough: it needs to be found! I optimize websites to improve their search engine rankings, increase visibility, and attract more organic traffic. This includes:",
+            "bullets": [
+                "Keyword analysis.",
+                "Content optimization.",
+                "Technical SEO improvements.",
+                "Increased organic traffic."
+            ],
+            "description2": "Learn more about",
+            "cta": "My SEO Optimization Service!",
+            "imgAlt": "SEO Optimization"
+        },
+        "performance": {
+            "title": "Web Performance Optimization",
+            "description1": "A slow website means lost customers. I improve loading speed and responsiveness by optimizing images, caching strategies, and other performance techniques to ensure a smooth user experience.",
+            "description2": "Read more about",
+            "cta": "Web Optimization and Performance!",
+            "imgAlt": "Web Performance Optimization"
+        },
+        "ecommerce": {
+            "title": "Online Stores (eCommerce)",
+            "description1": "Want to sell online? I build secure, scalable, and easy-to-manage eCommerce stores. Whether with WooCommerce or custom solutions, I ensure a seamless shopping experience for your customers.",
+            "description2": "Learn more about",
+            "cta": "My Online Store Creation Service!",
+            "imgAlt": "eCommerce Development"
+        },
+        "security": {
+            "title": "Website Security and Protection",
+            "description1": "Keeping your website secure is essential. I implement best security practices to prevent attacks and unauthorized access, including:",
+            "bullets": [
+                "Login attempt control to prevent brute force attacks.",
+                "Regular security updates to keep your site protected.",
+                "SSL and HTTPS configuration for secure data encryption."
+            ],
+            "description2": "Learn more about",
+            "cta": "My Web Security Service!",
+            "imgAlt": "Website Security"
+        }
     }
 }

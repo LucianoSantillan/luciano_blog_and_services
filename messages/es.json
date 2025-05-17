@@ -1,7 +1,7 @@
 {
     "Header": {
         "services": "Servicios",
-        "blog": "Blog",
+            "blog": "Blog",
         "contact": "Contacto",
         "contactId": "contacto",
         "servicesId": "servicios",
@@ -18,5 +18,54 @@
         ],
         "primaryCta": "Servicios",
         "secondaryCta": "¡Contacta!"
+    },
+    "Services": {
+        "intro": "Como desarrollador de software web, ayudo a empresas y particulares a crear, optimizar y mejorar su presencia en línea. Ya sea que necesites un sitio web completamente nuevo, mejor rendimiento o una estrategia de SEO más efectiva, ofrezco soluciones personalizadas para alcanzar tus objetivos.",
+        "devAndDesign": {
+            "title": "Desarrollo y Diseño Web",
+            "description1": "Creo sitios web modernos, responsivos y fáciles de usar que se alinean con tu visión y necesidades comerciales. Ya sea un portafolio personal, un sitio web empresarial o una aplicación web completa, garantizo que la funcionalidad y la estética vayan de la mano.",
+            "description2": "¡Conózca un poco más sobre",
+            "cta": "Mi Servicio de Desarrollo y Diseño Web!",
+            "imgAlt": "Desarrollo de Software Personalizado"
+        },
+        "seo": {
+            "title": "Optimización SEO",
+            "description1": "Tener un gran sitio web no es suficiente: ¡necesita ser encontrado! Optimizo sitios web para mejorar su posicionamiento en buscadores como Google, aumentar la visibilidad y atraer más tráfico orgánico. Esto incluye:",
+            "bullets": [
+                "Análisis de palabras clave.",
+                "Optimización de contenido.",
+                "Mejoras técnicas para SEO.",
+                "Aumento del tráfico orgánico."
+            ],
+            "description2": "¡Conózca más en detalle",
+            "cta": "Mi Servicio de Optimización SEO!",
+            "imgAlt": "Optimización SEO"
+        },
+        "performance": {
+            "title": "Optimización del Rendimiento Web",
+            "description1": "Un sitio web lento significa clientes perdidos. Mejoro la velocidad de carga y la capacidad de respuesta optimizando imágenes, estrategias de caché y otras técnicas de rendimiento para garantizar una experiencia de usuario fluida.",
+            "description2": "¡Lea más sobre",
+            "cta": "Optimización y Rendimiento Web!",
+            "imgAlt": "Optimización del Rendimiento Web"
+        },
+        "ecommerce": {
+            "title": "Tiendas online (eCommerce)",
+            "description1": "¿Quieres vender en línea? Construyo tiendas de comercio electrónico seguras, escalables y fáciles de gestionar. Ya sea con WooCommerce o soluciones personalizadas, garantizo una experiencia de compra fluida para tus clientes.",
+            "description2": "¡Conózca más en detalle",
+            "cta": "Mi Servicio de Creación de Tiendas Online!",
+            "imgAlt": "Desarrollo de eCommerce"
+        },
+        "security": {
+            "title": "Seguridad y Protección del Sitio Web",
+            "description1": "Mantener tu sitio web seguro es esencial. Implemento las mejores prácticas de seguridad para prevenir ataques y accesos no autorizados, incluyendo:",
+            "bullets": [
+                "Control de intentos de inicio de sesión para prevenir ataques de fuerza bruta.",
+                "Actualizaciones de seguridad regulares para mantener tu sitio protegido.",
+                "Configuración de SSL y HTTPS para una encriptación segura de datos."
+            ],
+            "description2": "¡Conózca más en detalle",
+            "cta": "Mi Servicio de Seguridad Web!",
+            "imgAlt": "Seguridad del Sitio Web"
+        }
     }
 }

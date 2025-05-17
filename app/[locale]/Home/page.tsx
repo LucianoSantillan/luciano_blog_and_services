@@ -16,7 +16,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
         primaryCta={messages?.Banner?.primaryCta ?? ""}
         secondaryCta={messages?.Banner?.secondaryCta ?? ""}
       />
-      <Services />
+      <Services messages={messages} />
       <Articles />
       <Contact />
     </>
