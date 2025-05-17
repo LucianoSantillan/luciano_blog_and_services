@@ -3,9 +3,12 @@
 import React from "react";
 import Image from "next/image";
 import { Instagram, LinkedIn, Email, WhatsApp } from "@mui/icons-material";
-import Heading3 from "@/app/design_system/Text/Headings/Heading3/Heading3";
+import {Heading2} from "@/app/design_system/Text";
 import Link from "@/app/design_system/Link/Link";
+import { TextField, Button } from "@mui/material"; // Import MUI components
 import "./Contact.css";
+import LottieAnimation from "@/app/components/LottieAnimation/LottieAnimation";
+import animationData from "@/public/animations/contact_lottie.json"; // Replace with your animation file path
 
 export default function Contact() {
   return (
@@ -13,7 +16,7 @@ export default function Contact() {
       <div className="contact-container">
         {/* Left Column */}
         <div className="contact-left">
-          <Heading3>Contacta</Heading3>
+          <Heading2>Contacta</Heading2>
           <p className="contact-text">
             No dudes en ponerte en contacto para hablar sobre las necesidades de tu proyecto.
           </p>
@@ -31,18 +34,69 @@ export default function Contact() {
               <WhatsApp className="contact-icon" />
             </Link>
           </div>
-          <Image
-            src="/path-to-your-image.jpg"
-            alt="Contact Image"
-            width={300}
-            height={200}
-            className="contact-image"
-          />
+          <LottieAnimation animationData={animationData} className="contact-animation" />
         </div>
 
         {/* Right Column */}
         <div className="contact-right">
-          {/* Reserved space for future content */}
+          <form className="contact-form">
+            <TextField
+              id="nombre"
+              name="nombre"
+              label="Nombre"
+              variant="outlined"
+              fullWidth
+              margin="normal"
+              required
+            />
+            <TextField
+              id="email"
+              name="email"
+              label="Email"
+              type="email"
+              variant="outlined"
+              fullWidth
+              margin="normal"
+              required
+            />
+            <TextField
+              id="telefono"
+              name="telefono"
+              label="Teléfono"
+              type="tel"
+              variant="outlined"
+              fullWidth
+              margin="normal"
+            />
+            <TextField
+              id="asunto"
+              name="asunto"
+              label="Asunto"
+              variant="outlined"
+              fullWidth
+              margin="normal"
+              required
+            />
+            <TextField
+              id="mensaje"
+              name="mensaje"
+              label="Mensaje"
+              variant="outlined"
+              fullWidth
+              margin="normal"
+              multiline
+              rows={5}
+              required
+            />
+            <Button
+              type="submit"
+              variant="contained"
+              color="primary"
+              className="submit-button"
+            >
+              Enviar
+            </Button>
+          </form>
         </div>
       </div>
     </section>
