@@ -1,25 +1,25 @@
 .articles-section {
-  /* margin: 2rem 0; */
   text-align: center;
 }
 
 .articles-row {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: 2rem;
+  justify-content: center;
 }
 
 .article-card {
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   padding: 1rem;
-  width: 220px;
+  width: 100%; /* Ensure it adapts to the grid column width */
 }
 
 .article-image {
   width: 100%;
-  height: 120px;
+  aspect-ratio: 3 / 2; /* Maintain a 3:2 aspect ratio */
   object-fit: cover;
   border-radius: 6px;
   cursor: pointer;
@@ -27,5 +27,4 @@
 
 .article-card-title {
   margin-top: 1rem;
-  font-size: 1.1rem;
 }

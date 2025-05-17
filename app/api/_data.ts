@@ -41,6 +41,20 @@ Entendé qué busca lograr el PR antes de revisar cómo está implementado.
 🤝 Feedback respetuoso
 El objetivo es mejorar el código, no criticar a quien lo escribió. Concentrate en el trabajo, asumí buenas intenciones y usá un lenguaje amable y colaborativo.`,
     img: "/codeReview.png"
+  },
+  {
+    id: postIdSeq++,
+    userId: 1,
+    title: "Criterios y Guía para Revisiones de Código (en proyectos con React)",
+    body: `Empezá con la mentalidad adecuada
+Antes de revisar el código, tené en cuenta estos valores fundamentales:
+
+🎯 Propósito ante todo
+Entendé qué busca lograr el PR antes de revisar cómo está implementado.
+
+🤝 Feedback respetuoso
+El objetivo es mejorar el código, no criticar a quien lo escribió. Concentrate en el trabajo, asumí buenas intenciones y usá un lenguaje amable y colaborativo.`,
+    img: "/codeReview.png"
   }
 ];
 
