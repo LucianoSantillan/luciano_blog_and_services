@@ -1,4 +1,4 @@
-'use client';
+// 'use client';
 import "./Services.css";
 import ServiceRow from "./components/ServiceRow/ServiceRow";
 import MenuList from "@/app/components/MenuList"; // Import MenuList for the list items
@@ -49,7 +49,8 @@ export default function Services() {
                                     Tener un gran sitio web no es suficiente: ¡necesita ser encontrado! Optimizo sitios web para mejorar su posicionamiento en buscadores como Google, aumentar la visibilidad y atraer más tráfico orgánico. Esto incluye:
                                 </p>
                                 <MenuList
-                                    style={{ maxWidth: "85vw",margin: "auto", width: "19rem",alignItems: "flex-start", display: "flex", flexDirection: "column" }}
+                                    className="menu-list"
+                                    style={{ width: "19rem" }}
                                     bullets={[
                                         "Análisis de palabras clave.",
                                         "Optimización de contenido.",
@@ -128,19 +129,21 @@ export default function Services() {
                                     Mantener tu sitio web seguro es esencial. Implemento las mejores prácticas de seguridad para prevenir ataques y accesos no autorizados, incluyendo:
                                 </p>
                                 <MenuList
-                                style={{ maxWidth: "85vw",margin: "auto", width: "25rem",alignItems: "flex-start", display: "flex", flexDirection: "column" }}
+                                    className="menu-list"
+                                    style={{ width: "35rem" }}
+
                                     bullets={[
                                         "Control de intentos de inicio de sesión para prevenir ataques de fuerza bruta",
                                         "Actualizaciones de seguridad regulares para mantener tu sitio protegido",
                                         "Configuración de SSL y HTTPS para una encriptación segura de datos",
                                     ]}
                                 />
-                                <div style={{ marginTop: "1rem" }}>
+                                <p style={{ marginTop: "1rem" }}>
                                     ¡Conózca más en detalle{" "}
                                     <Link href="/contact" className="link">
                                         Mi Servicio de Seguridad Web!
                                     </Link>
-                                </div>
+                                </p>
                             </>
                         }
                         imgSrc={securityImg} // Replace with the appropriate image source if available
