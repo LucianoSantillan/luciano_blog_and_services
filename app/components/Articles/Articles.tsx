@@ -15,15 +15,17 @@ export default function Articles() {
         <div className="articles-row">
           {articles.map((post) => (
             <div className="article-card" key={post.id}>
-              <Image
-                src={post.img}
-                alt={post.title}
-                className="article-image"
-                width={300}
-                height={200}
-                style={{ objectFit: 'cover' }}
-              />
-              <Link href={`#`} className="article-card-title">{post.title}</Link>
+              <Link href={post.slug} className="article-card-title">
+                <Image
+                  src={post.img}
+                  alt={post.title}
+                  className="article-image"
+                  width={300}
+                  height={200}
+                  style={{ objectFit: 'cover' }}
+                />
+                {post.title}
+              </Link>
             </div>
           ))}
         </div>

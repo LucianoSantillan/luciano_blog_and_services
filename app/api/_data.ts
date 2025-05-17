@@ -1,5 +1,6 @@
 export interface Post {
   id: number;
+  slug: string;
   userId: number;
   title: string;
   body: string;
@@ -21,6 +22,7 @@ let commentIdSeq = 1;
 export const posts: Post[] = [
   {
     id: postIdSeq++,
+    slug: "dominar-el-principio-de-responsabilidad-unica-en-react",
     userId: 1,
     title: "Dominar el Principio de Responsabilidad Única en React",
     body: `Una de las mejores formas de destacar como desarrollador de React es interiorizar y aplicar realmente los principios de la ingeniería de software — especialmente el Principio de Responsabilidad Única (SRP, por sus siglas en inglés).
@@ -30,6 +32,7 @@ Aunque SRP proviene del diseño orientado a objetos, es extremadamente relevante
   },
   {
     id: postIdSeq++,
+    slug: "criterios-y-guia-para-revisiones-de-codigo-en-proyectos-con-react",
     userId: 1,
     title: "Criterios y Guía para Revisiones de Código (en proyectos con React)",
     body: `Empezá con la mentalidad adecuada
@@ -44,6 +47,7 @@ El objetivo es mejorar el código, no criticar a quien lo escribió. Concentrate
   },
   {
     id: postIdSeq++,
+    slug: "criterios-y-guia-para-revisiones-de-codigo-en-proyectos-con-react",
     userId: 1,
     title: "Criterios y Guía para Revisiones de Código (en proyectos con React)",
     body: `Empezá con la mentalidad adecuada
