@@ -40,11 +40,66 @@
 }
 
 .link {
-    color: blue;
-    text-decoration: underline;
-    cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .link:hover {
-    color: darkblue;
+  color: darkblue;
+}
+
+/* Responsive styles */
+@media (max-width: 1023px) { /* lg breakpoint */
+  .services-row {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .services-row-reverse {
+    flex-direction: column;
+  }
+
+  .services-text,
+  .services-image {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 767px) { /* md breakpoint */
+  .services-header {
+    margin-bottom: 30px;
+  }
+
+  .services-row {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 639px) { /* sm breakpoint */
+  .services-section {
+    padding: 30px 16px;
+  }
+
+  .services-header {
+    margin-bottom: 20px;
+  }
+
+  .services-row {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 479px) { /* xs breakpoint */
+  .services-section {
+    padding: 20px 12px;
+  }
+
+  .services-header {
+    margin-bottom: 15px;
+  }
+
+  .services-row {
+    gap: 10px;
+  }
 }

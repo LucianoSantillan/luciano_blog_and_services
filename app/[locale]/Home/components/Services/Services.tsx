@@ -21,7 +21,7 @@ export default function Services() {
                         Como desarrollador de software web, ayudo a empresas y particulares a crear, optimizar y mejorar su presencia en línea. Ya sea que necesites un sitio web completamente nuevo, mejor rendimiento o una estrategia de SEO más efectiva, ofrezco soluciones personalizadas para alcanzar tus objetivos.
                     </p>
                 </div>
-                <div style={{display: "flex", flexDirection: "column", gap: "3rem"}}>
+                <div style={{ display: "flex", flexDirection: "column", gap: "3rem" }}>
                     {/* Service Rows */}
                     <ServiceRow
                         title="Desarrollo y Diseño Webs"
@@ -49,6 +49,7 @@ export default function Services() {
                                     Tener un gran sitio web no es suficiente: ¡necesita ser encontrado! Optimizo sitios web para mejorar su posicionamiento en buscadores como Google, aumentar la visibilidad y atraer más tráfico orgánico. Esto incluye:
                                 </p>
                                 <MenuList
+                                    style={{ maxWidth: "85vw",margin: "auto", width: "19rem",alignItems: "flex-start", display: "flex", flexDirection: "column" }}
                                     bullets={[
                                         "Análisis de palabras clave.",
                                         "Optimización de contenido.",
@@ -127,6 +128,7 @@ export default function Services() {
                                     Mantener tu sitio web seguro es esencial. Implemento las mejores prácticas de seguridad para prevenir ataques y accesos no autorizados, incluyendo:
                                 </p>
                                 <MenuList
+                                style={{ maxWidth: "85vw",margin: "auto", width: "25rem",alignItems: "flex-start", display: "flex", flexDirection: "column" }}
                                     bullets={[
                                         "Control de intentos de inicio de sesión para prevenir ataques de fuerza bruta",
                                         "Actualizaciones de seguridad regulares para mantener tu sitio protegido",

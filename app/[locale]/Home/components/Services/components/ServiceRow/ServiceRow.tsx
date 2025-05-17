@@ -15,7 +15,7 @@ export default function ServiceRow({ title, description, imgSrc, imgAlt, reverse
     return (
         <div className={`services-row ${reverse ? "services-row-reverse" : ""}`}>
             {/* Text Column */}
-            <div className="services-column services-text">
+            <div style={{textAlign: "center"}} className="services-column services-text">
                 <Heading3>{title}</Heading3>
                 <div>{description}</div> {/* Render the description as ReactNode */}
             </div>
